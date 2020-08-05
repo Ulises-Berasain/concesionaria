@@ -17,6 +17,7 @@ const auto2 = new Autos("Peugeot", "208", "5", 250000);
 const moto1 = new Motos("Honda", "Titan","125c", 60000);
 const moto2 = new Motos("Yamaha", "YBR", "160c",80500.50);
 const preciosVehiculos = [auto1.precio, auto2.precio, moto1.precio, moto2.precio];
+const modelosVehiculos = [auto1.modelo, auto2.modelo, moto1.modelo, moto2.modelo];
 
 console.log(`Marca: ${auto1.marca} // Modelo: ${auto1.modelo} // Puertas: ${auto1.puertas} // Precio: $${auto1.precio} `);
 console.log(`Marca: ${moto1.marca} // Modelo ${moto1.modelo} // Cilindrada: ${moto1.cilindrada} // Precio: $${moto1.precio} `);
@@ -24,6 +25,8 @@ console.log(`Marca: ${auto2.marca} // Modelo: ${auto2.modelo} // Puertas: ${auto
 console.log(`Marca: ${moto2.marca} // Modelo ${moto2.modelo} // Cilindrada: ${moto2.cilindrada} // Precio: $${moto2.precio} `);
 console.log(`Vehículo más caro: ${mostrarVehiculoMayorPrecio()}`);
 console.log(`Vehículo más barato: ${mostrarVehiculoMenorPrecio()}`);
+console.log(`Vehículo que contiene en el modelo la letra "Y": ${mostrarVehiculoModeloY(modelosVehiculos)}`)
+
 function obtenerMayorPrecio(preciosVehiculos){
     let mayorNumero = preciosVehiculos[0];
 
@@ -73,6 +76,14 @@ function mostrarVehiculoMenorPrecio(){
 
     }if(obtenerMenorPrecio(preciosVehiculos) === moto2.precio){
         return `${moto2.marca} ${moto2.modelo}`;
+    }
+};
+
+function mostrarVehiculoModeloY(modelosVehiculos){
+    for(let i = 0; i<modelosVehiculos.length; i++){
+        if(modelosVehiculos[i].indexOf("Y") !== -1){
+            return modelosVehiculos[i];
+        }
     }
 };
 
