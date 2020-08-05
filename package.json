@@ -1,0 +1,19 @@
+{
+  "name": "concesionaria",
+  "version": "1.0.0",
+  "description": "Ejercicio Oneready",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ulises-Berasain/concesionaria.git"
+  },
+  "author": "Ulises Berasain",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ulises-Berasain/concesionaria/issues"
+  },
+  "homepage": "https://github.com/Ulises-Berasain/concesionaria#readme"
+}
